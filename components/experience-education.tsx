@@ -1,8 +1,8 @@
 "use client";
 
 import { motion, useReducedMotion } from "motion/react";
-import { GraduationCap, Certificate, Sparkle } from "@phosphor-icons/react";
-import { experience, education, certifications, leadership } from "@/lib/content";
+import { GraduationCap, Certificate, Sparkle, BookOpen } from "@phosphor-icons/react";
+import { experience, education, certifications, leadership, publishedPaper } from "@/lib/content";
 import { Reveal } from "./motion-primitives";
 
 /* ---------- Experience timeline ---------- */
@@ -104,7 +104,7 @@ function TimelineItem({
   );
 }
 
-/* ---------- Education + Certifications + Leadership ---------- */
+/* ---------- Education + Certifications + Leadership + Published Paper ---------- */
 export function Education() {
   return (
     <section id="education" className="mx-auto max-w-[1400px] px-5 py-24 md:px-8 md:py-32">
@@ -151,8 +151,31 @@ export function Education() {
         </Reveal>
       </div>
 
+      {/* Published Paper */}
+      <Reveal delay={0.06} className="mt-6">
+        <ElevateCard className="flex flex-col p-8 md:p-10">
+          <div className="flex items-start gap-4">
+            <BookOpen size={32} weight="light" style={{ color: "var(--accent)" }} />
+            <div>
+              <p className="text-[12px] font-semibold uppercase tracking-[0.16em] text-[var(--muted)]">
+                Published Paper
+              </p>
+              <h3 className="mt-2 font-[family-name:var(--font-display)] text-[20px] font-semibold leading-snug tracking-tight text-[var(--ink)] md:text-[22px]">
+                {publishedPaper.title}
+              </h3>
+              <p className="mt-3 max-w-[70ch] text-[14.5px] leading-relaxed text-[var(--muted)]">
+                {publishedPaper.note}
+              </p>
+              <p className="mt-2 text-[13px] font-medium text-[var(--muted)]">
+                {publishedPaper.journal}
+              </p>
+            </div>
+          </div>
+        </ElevateCard>
+      </Reveal>
+
       {/* Leadership row */}
-      <div className="mt-6 grid grid-cols-1 gap-6 md:grid-cols-3">
+      <div className="mt-6 grid grid-cols-1 gap-6 md:grid-cols-2">
         {leadership.map((l, i) => (
           <Reveal key={l.title} delay={i * 0.06}>
             <ElevateCard className="flex h-full flex-col p-7">
