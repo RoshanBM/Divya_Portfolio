@@ -16,9 +16,9 @@ export function Work() {
           <h2 className="font-[family-name:var(--font-display)] text-[clamp(2.2rem,6vw,4.4rem)] font-bold leading-[0.98] tracking-tight text-[var(--ink)]">
             Selected work
           </h2>
-          <p className="max-w-[34ch] text-[15px] leading-relaxed text-[var(--muted)]">
-            Six campaigns across food, fashion, and street culture. Strategy,
-            art direction, and edit.
+          <p className="max-w-[44ch] text-[15px] leading-relaxed text-[var(--muted)]">
+            Executed campaigns across F&B, fashion retail, and lifestyle brands through
+            content strategy, art direction, ad execution, and visual storytelling.
           </p>
         </div>
       </Reveal>
@@ -113,7 +113,6 @@ function CaseStudy({
             />
           </div>
           {rest.map((img) => {
-            // Wide images take the full row; portrait/square share the 2-col grid.
             const fullRow = img.ratio === "wide";
             return (
               <div key={img.src} className={fullRow ? "col-span-2" : "col-span-2 md:col-span-1"}>
