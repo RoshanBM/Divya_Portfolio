@@ -14,7 +14,8 @@ export type Project = {
     type?: "image" | "video";
   }[];
   // "split" => landscape media stacked on one side, portrait media on the other.
-  mediaLayout?: "split";
+  // "pair"  => two portrait images side by side, shown uncropped.
+  mediaLayout?: "split" | "pair";
   accentNote?: string;
 };
 
@@ -54,10 +55,10 @@ export const projects: Project[] = [
       "Held a consistent editorial register across drops so the feed reads as one story.",
     ],
     tags: ["Content Strategy", "Styling", "Carousel Design", "Travel Fashion"],
+    mediaLayout: "pair",
     images: [
       { src: "/work/joonus 1.png", alt: "Joonus Sait fashion forecast carousel", ratio: "portrait" },
       { src: "/work/joonus 4.png", alt: "Joonus Sait monsoon campaign", ratio: "portrait" },
-      { src: "/work/js extra - other creatives.png", alt: "Joonus Sait why merino wool carousel", ratio: "portrait" },
     ],
   },
   {

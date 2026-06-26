@@ -57,6 +57,9 @@ function CaseStudy({
   const landscapeMedia = project.images.filter((m) => m.ratio === "wide");
   const portraitMedia = project.images.filter((m) => m.ratio !== "wide");
 
+  // Pair layout: two portrait images side by side, shown uncropped.
+  const isPair = project.mediaLayout === "pair";
+
   return (
     <article className="grid grid-cols-1 gap-8 lg:grid-cols-12 lg:gap-10">
       {/* Text column */}
@@ -110,7 +113,19 @@ function CaseStudy({
       {/* Media column — images with vertical videos alongside */}
       <div className={`lg:col-span-8 ${flip ? "lg:order-1" : "lg:order-2"}`}>
         <div className="flex flex-col gap-4 md:gap-5 lg:flex-row">
-          {isSplit ? (
+          {isPair ? (
+            <div className="grid w-full grid-cols-1 gap-4 sm:grid-cols-2 md:gap-5">
+              {project.images.map((m, i) => (
+                <ZoomImage
+                  key={m.src}
+                  src={m.src}
+                  alt={m.alt}
+                  priority={index === 0 && i === 0}
+                  aspect="aspect-[4/5]"
+                />
+              ))}
+            </div>
+          ) : isSplit ? (
             <>
               {/* Landscape media stacked on the left */}
               <div className="flex flex-1 flex-col gap-4 md:gap-5">
