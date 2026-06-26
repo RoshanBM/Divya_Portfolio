@@ -99,7 +99,7 @@ export function Hero() {
           </motion.div>
         </div>
 
-        {/* Right: portrait / monogram slot */}
+        {/* Right: portrait */}
         <motion.div
           initial={reduce ? false : { opacity: 0, scale: 0.92 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -110,7 +110,7 @@ export function Hero() {
         </motion.div>
       </div>
 
-      {/* scroll affordance — arrow only, no text cue */}
+      {/* scroll affordance */}
       <motion.div
         initial={reduce ? false : { opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -140,20 +140,11 @@ function PortraitSlot() {
         boxShadow: "0 24px 60px rgb(var(--shadow-tint) / 0.16)",
       }}
     >
-      {/* Replace with a real portrait at /public/portrait.jpg and uncomment:
-          <img src="/portrait.jpg" alt="Divyashree N S" className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
-      */}
-      <div className="flex h-full w-full flex-col items-center justify-center gap-3 p-6 text-center">
-        <span
-          className="font-[family-name:var(--font-display)] text-[5rem] font-bold leading-none transition-transform duration-700 group-hover:scale-105"
-          style={{ color: "var(--accent)" }}
-        >
-          D
-        </span>
-        <span className="text-[12px] font-medium uppercase tracking-[0.2em] text-[var(--muted)]">
-          Bengaluru
-        </span>
-      </div>
+      <img
+        src="/me.jpg"
+        alt="Divyashree N S"
+        className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+      />
       {/* corner accent */}
       <span
         className="pointer-events-none absolute bottom-3 right-3 h-2 w-2 rounded-full"
