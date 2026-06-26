@@ -27,10 +27,9 @@ export const projects: Project[] = [
     ],
     tags: ["Visual Language", "Art Direction", "Poster Design", "Social"],
     images: [
-      { src: "/work/koreyaah-ramen.jpeg", alt: "Koreyaah ramen poster with kinetic repeated typography", ratio: "tall" },
-      { src: "/work/koreyaah-korndog.jpeg", alt: "Koreyaah korn dog promotional poster", ratio: "tall" },
-      { src: "/work/koreyaah-spicyramen.jpeg", alt: "Hand holding a bowl of Koreyaah spicy ramen", ratio: "wide" },
-      { src: "/work/koreyaah-boba.jpeg", alt: "Hand holding Koreyaah boba tea with brand mask", ratio: "portrait" },
+      { src: "/work/koreyaah 1.png", alt: "Koreyaah spicy ramen poster", ratio: "tall" },
+      { src: "/work/koreyaah 3.png", alt: "Koreyaah korn dog promotional poster", ratio: "tall" },
+      { src: "/work/koreyaah 6.png", alt: "Koreyaah dumplings campaign poster", ratio: "tall" },
     ],
   },
   {
@@ -48,9 +47,9 @@ export const projects: Project[] = [
     ],
     tags: ["Content Strategy", "Styling", "Carousel Design", "Travel Fashion"],
     images: [
-      { src: "/work/joonus-vneck.jpeg", alt: "Joonus Sait flat-lay with V-neck sweater capsule", ratio: "portrait" },
-      { src: "/work/joonus-thermals.jpeg", alt: "Joonus Sait thermals and cardigan flat-lay", ratio: "portrait" },
-      { src: "/work/joonus-kedarnath.jpeg", alt: "Joonus Sait Kedarnath travel checklist carousel cover", ratio: "portrait" },
+      { src: "/work/joonus 1.png", alt: "Joonus Sait fashion forecast carousel", ratio: "portrait" },
+      { src: "/work/joonus 4.png", alt: "Joonus Sait monsoon campaign", ratio: "portrait" },
+      { src: "/work/js extra - other creatives.png", alt: "Joonus Sait why merino wool carousel", ratio: "portrait" },
     ],
   },
   {
@@ -68,8 +67,8 @@ export const projects: Project[] = [
     ],
     tags: ["Influencer Marketing", "Fragrance Education", "Content Strategy", "Luxury Retail"],
     images: [
-      { src: "/work/voxpop-bvlgari.jpeg", alt: "Fragrance vox pop influencer campaign", ratio: "portrait" },
-      { src: "/work/road-interview.jpeg", alt: "Fragrance discovery influencer content shoot", ratio: "wide" },
+      { src: "/work/aroma 2.png", alt: "Aroma Shimmers fragrance and bags campaign", ratio: "portrait" },
+      { src: "/work/aroma 4.png", alt: "Aroma Shimmers discount offer creative", ratio: "portrait" },
     ],
   },
   {
@@ -87,8 +86,9 @@ export const projects: Project[] = [
     ],
     tags: ["Shoot Planning", "Art Direction", "Product Content", "Footwear"],
     images: [
-      { src: "/work/stylism-grid.jpeg", alt: "Stylism Instagram feed grid of footwear campaigns", ratio: "square" },
-      { src: "/work/stylism-loafers.jpeg", alt: "Stylism penny loafers editorial triptych", ratio: "wide" },
+      { src: "/work/stylism 1.png", alt: "Stylism loafer product shot", ratio: "portrait" },
+      { src: "/work/stylism 2.png", alt: "Stylism woven loafer editorial", ratio: "portrait" },
+      { src: "/work/stylism 4.png", alt: "Stylism leather loafers campaign", ratio: "wide" },
     ],
   },
 ];
