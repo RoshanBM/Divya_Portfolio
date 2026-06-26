@@ -16,22 +16,20 @@ export const projects: Project[] = [
     slug: "koreyaah",
     title: "Koreyaah",
     client: "Koreyaah Korean Street Food",
-    category: "Brand Campaigns",
+    category: "Editing",
     year: "2026",
     blurb:
-      "A full social identity for a Korean street-food brand in Begur. Bold poster typography, a recurring mask mark, and campaign moments that ride cultural events like the World Cup.",
+      "Created promotional posters, ad creatives, and launch material for restaurant campaigns, including new branch openings, in-store promotional pamphlets, and visual communication for brand expansion.",
     contribution: [
       "Built the visual language: kinetic poster type, signature red, and the brand mask used across every drop.",
-      "Ran themed campaign moments (World Cup tie-ins, price-drop offers) that turned menu items into events.",
       "Art-directed product photography for ramen, korn dogs, and boba to feel premium yet street.",
+      "Produced in-store promotional material and visual assets for new branch opening campaigns.",
     ],
-    tags: ["Brand Strategy", "Art Direction", "Poster Design", "Social"],
+    tags: ["Visual Language", "Art Direction", "Poster Design", "Social"],
     images: [
       { src: "/work/koreyaah-ramen.jpeg", alt: "Koreyaah ramen poster with kinetic repeated typography", ratio: "tall" },
-      { src: "/work/koreyaah-korndog.jpeg", alt: "Koreyaah korn dog price-drop offer poster", ratio: "tall" },
+      { src: "/work/koreyaah-korndog.jpeg", alt: "Koreyaah korn dog promotional poster", ratio: "tall" },
       { src: "/work/koreyaah-spicyramen.jpeg", alt: "Hand holding a bowl of Koreyaah spicy ramen", ratio: "wide" },
-      { src: "/work/koreyaah-trophy.jpeg", alt: "Koreyaah bowl beside a World Cup trophy on a pitch", ratio: "tall" },
-      { src: "/work/koreyaah-stadium.jpeg", alt: "Koreyaah bowl and football on a stadium seat", ratio: "tall" },
       { src: "/work/koreyaah-boba.jpeg", alt: "Hand holding Koreyaah boba tea with brand mask", ratio: "portrait" },
     ],
   },
@@ -42,13 +40,13 @@ export const projects: Project[] = [
     category: "Content Strategy",
     year: "2026",
     blurb:
-      "Editorial styling and content direction for a fashion label. Flat-lay capsules, travel-led carousels, and a paper-note visual motif that makes product feel personal.",
+      "Built seasonal content strategies for winter wear targeting international students, travellers, and pilgrimage-based audiences, combining destination-based styling, weather-led storytelling, and travel-focused fashion marketing.",
     contribution: [
-      "Designed flat-lay capsule wardrobes that pair label pieces with styling context.",
+      "Designed flat-lay capsule wardrobes that pair label pieces with destination styling context.",
       "Wrote and laid out carousel content built to save and share, not just scroll past.",
       "Held a consistent editorial register across drops so the feed reads as one story.",
     ],
-    tags: ["Content Strategy", "Styling", "Carousel Design", "Copy"],
+    tags: ["Content Strategy", "Styling", "Carousel Design", "Travel Fashion"],
     images: [
       { src: "/work/joonus-vneck.jpeg", alt: "Joonus Sait flat-lay with V-neck sweater capsule", ratio: "portrait" },
       { src: "/work/joonus-thermals.jpeg", alt: "Joonus Sait thermals and cardigan flat-lay", ratio: "portrait" },
@@ -56,52 +54,52 @@ export const projects: Project[] = [
     ],
   },
   {
+    slug: "aroma-shimmers",
+    title: "Aroma Shimmers",
+    client: "Aroma Shimmers",
+    category: "Influencer Marketing",
+    year: "2025",
+    blurb:
+      "Created influencer-led fragrance discovery campaigns focused on perfume notes, product education, and audience engagement through interactive posts, public conversations, and luxury retail storytelling.",
+    contribution: [
+      "Developed influencer briefs and content frameworks around fragrance notes and product education.",
+      "Drove audience engagement through interactive posts and public fragrance discovery conversations.",
+      "Produced luxury retail storytelling across bags, perfume notes, and vox pop content formats.",
+    ],
+    tags: ["Influencer Marketing", "Fragrance Education", "Content Strategy", "Luxury Retail"],
+    images: [
+      { src: "/work/voxpop-bvlgari.jpeg", alt: "Fragrance vox pop influencer campaign", ratio: "portrait" },
+      { src: "/work/road-interview.jpeg", alt: "Fragrance discovery influencer content shoot", ratio: "wide" },
+    ],
+  },
+  {
     slug: "stylism",
     title: "Stylism",
     client: "Stylism Footwear",
-    category: "Brand Campaigns",
+    category: "Shoot Planning",
     year: "2025",
     blurb:
-      "Premium footwear content with warm tones and tactile detail. Close-cropped texture shots and clean editorial captions that let the leather do the talking.",
+      "Planned and executed product-focused shoots for footwear and accessories, emphasizing composition, product detailing, material textures, and luxury retail presentation.",
     contribution: [
-      "Directed a feed system of texture-led product shots with a warm, premium grade.",
-      "Set caption and title conventions that read as a catalogue, not an ad.",
-      "Balanced lifestyle and studio frames to widen the brand's range.",
+      "Planned shoot formats, mood boards, and shot lists for shoes, bags, belts, and loafers.",
+      "Directed texture-led product compositions emphasising material quality and retail presentation.",
+      "Balanced lifestyle and studio frames to widen the brand's visual range.",
     ],
-    tags: ["Art Direction", "Product Content", "Grid Design"],
+    tags: ["Shoot Planning", "Art Direction", "Product Content", "Footwear"],
     images: [
       { src: "/work/stylism-grid.jpeg", alt: "Stylism Instagram feed grid of footwear campaigns", ratio: "square" },
       { src: "/work/stylism-loafers.jpeg", alt: "Stylism penny loafers editorial triptych", ratio: "wide" },
     ],
   },
-  {
-    slug: "road-interviews",
-    title: "Road Interviews",
-    client: "Vox Pop Series",
-    category: "Vox Pop",
-    year: "2025",
-    blurb:
-      "Street interview formats built for reach. Tight hooks, on-screen captioning, and product tie-ins that turn a sidewalk chat into a shareable brand moment.",
-    contribution: [
-      "Planned shoot formats and hooks designed for the first three seconds.",
-      "Featured on-camera and directed conversational, sponsor-friendly segments.",
-      "Edited for caption-first watching with strong retention beats.",
-    ],
-    tags: ["Vox Pop", "Shoot Planning", "On-camera", "Editing"],
-    images: [
-      { src: "/work/road-interview.jpeg", alt: "Road interview office shoot stills", ratio: "wide" },
-      { src: "/work/voxpop-bvlgari.jpeg", alt: "Bvlgari fragrance vox pop on the street", ratio: "portrait" },
-    ],
-  },
 ];
 
 export const whatIDo = [
-  { title: "Influencer Marketing", body: "Matching creators to brands and running collabs that actually convert." },
+  { title: "Brand Campaigns", body: "End-to-end campaign moments that turn products into cultural events." },
   { title: "Content Strategy", body: "Calendars, formats, and hooks built around how people really watch." },
   { title: "Shoot Planning", body: "Mood boards, shot lists, and on-set direction from call sheet to wrap." },
   { title: "Editing", body: "Short-form cuts tuned for retention, caption-first and platform-native." },
-  { title: "Vox Pop", body: "Street formats with sharp hooks and sponsor-ready storytelling." },
-  { title: "Brand Campaigns", body: "End-to-end campaign moments that turn products into events." },
+  { title: "Influencer Marketing", body: "Matching creators to brands and running collabs that actually convert." },
+  { title: "Ad Campaigns", body: "Paid and organic executions built to drive measurable results." },
 ];
 
 export const experience = [
@@ -142,6 +140,12 @@ export const education = {
   location: "Bengaluru, India",
 };
 
+export const publishedPaper = {
+  title: "A Study on AI-Driven Motion Capture and Pose Estimation for Physiotherapy",
+  note: "A research study focused on using AI-driven motion analysis and pose estimation to improve physiotherapy accuracy and rehabilitation tracking.",
+  journal: "IJSREM",
+};
+
 export const certifications = [
   { name: "Internet of Things", issuer: "NPTEL" },
   { name: "Database Management Systems", issuer: "NPTEL" },
@@ -149,11 +153,6 @@ export const certifications = [
 ];
 
 export const leadership = [
-  {
-    title: "E-Summit & Business Marathon",
-    org: "RVCE Entrepreneurship Cell",
-    note: "Managed media coverage for 50,000+ viewers across speakers, startup pitches, and cultural events.",
-  },
   {
     title: "8th Mile Annual Cultural Fest",
     org: "RVCE",
@@ -167,7 +166,7 @@ export const leadership = [
 ];
 
 export const skills = {
-  creative: [
+  marketing: [
     "Social Media Strategy",
     "Content Creation",
     "Creative Writing",
@@ -178,6 +177,13 @@ export const skills = {
     "Digital Marketing",
   ],
   tools: ["Canva", "CapCut", "Adobe Lightroom", "Microsoft Office"],
+  personal: [
+    "Clear Communicator",
+    "Flexible Problem-Solver",
+    "Results-Driven",
+    "Organized",
+    "Team-Oriented",
+  ],
   languages: ["English", "Hindi", "Kannada", "Telugu"],
 };
 
