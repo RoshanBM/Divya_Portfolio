@@ -7,7 +7,12 @@ export type Project = {
   blurb: string;
   contribution: string[];
   tags: string[];
-  images: { src: string; alt: string; ratio: "portrait" | "square" | "wide" | "tall" }[];
+  images: {
+    src: string;
+    alt: string;
+    ratio: "portrait" | "square" | "wide" | "tall";
+    type?: "image" | "video";
+  }[];
   accentNote?: string;
 };
 
@@ -30,6 +35,7 @@ export const projects: Project[] = [
       { src: "/work/koreyaah 1.png", alt: "Koreyaah spicy ramen poster", ratio: "tall" },
       { src: "/work/koreyaah 3.png", alt: "Koreyaah korn dog promotional poster", ratio: "tall" },
       { src: "/work/koreyaah 6.png", alt: "Koreyaah dumplings campaign poster", ratio: "tall" },
+      { src: "/work/koreyaah 5.mp4", alt: "Koreyaah food campaign reel", ratio: "portrait", type: "video" },
     ],
   },
   {
@@ -67,8 +73,9 @@ export const projects: Project[] = [
     ],
     tags: ["Influencer Marketing", "Fragrance Education", "Content Strategy", "Luxury Retail"],
     images: [
-      { src: "/work/aroma 2.png", alt: "Aroma Shimmers fragrance and bags campaign", ratio: "portrait" },
-      { src: "/work/aroma 4.png", alt: "Aroma Shimmers discount offer creative", ratio: "portrait" },
+      { src: "/work/aroma 5.jpeg", alt: "Aroma Shimmers art of layering campaign", ratio: "portrait" },
+      { src: "/work/aroma 4.png", alt: "Aroma Shimmers discount offer creative", ratio: "square" },
+      { src: "/work/aroma 1.mp4", alt: "Aroma Shimmers fragrance discovery reel", ratio: "portrait", type: "video" },
     ],
   },
   {
@@ -86,9 +93,28 @@ export const projects: Project[] = [
     ],
     tags: ["Shoot Planning", "Art Direction", "Product Content", "Footwear"],
     images: [
-      { src: "/work/stylism 1.png", alt: "Stylism loafer product shot", ratio: "portrait" },
-      { src: "/work/stylism 2.png", alt: "Stylism woven loafer editorial", ratio: "portrait" },
+      { src: "/work/stylism 5.jpeg", alt: "Stylism leather briefcase product shot", ratio: "portrait" },
       { src: "/work/stylism 4.png", alt: "Stylism leather loafers campaign", ratio: "wide" },
+      { src: "/work/stylism 3.mp4", alt: "Stylism footwear campaign reel", ratio: "portrait", type: "video" },
+    ],
+  },
+  {
+    slug: "hermitage",
+    title: "Hermitage",
+    client: "Hermitage",
+    category: "Production",
+    year: "2026",
+    blurb:
+      "Handled shoots, videography, photography, and event management for Hermitage, focusing on visual storytelling, on-ground execution, and premium brand documentation.",
+    contribution: [
+      "Led end-to-end shoot production and on-ground execution across brand events.",
+      "Directed videography and photography to capture premium brand documentation.",
+      "Managed event coverage and visual storytelling from planning to final delivery.",
+    ],
+    tags: ["Shoot Production", "Videography", "Photography", "Event Management", "Brand Coverage"],
+    images: [
+      { src: "/work/hermitage 1.mp4", alt: "Hermitage event coverage reel", ratio: "portrait", type: "video" },
+      { src: "/work/hermitage 2.mp4", alt: "Hermitage brand documentation reel", ratio: "portrait", type: "video" },
     ],
   },
 ];

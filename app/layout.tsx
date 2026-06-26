@@ -45,7 +45,7 @@ export default function RootLayout({
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
       </head>
-      <body>
+      <body suppressHydrationWarning>
         <ThemeProvider>
           <Cursor />
           <div className="grain" aria-hidden />

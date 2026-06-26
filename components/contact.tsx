@@ -50,6 +50,14 @@ export function Contact() {
                 <DownloadSimple size={16} weight="bold" />
                 Download
               </MagneticButton>
+              <MagneticButton
+                href="https://drive.google.com/drive/folders/1DAa1XpxC8R0z4mt_paqAv_YVUHBa5iZe"
+                target="_blank"
+                variant="ghost"
+              >
+                <ArrowUpRight size={16} weight="bold" />
+                View More Work
+              </MagneticButton>
             </div>
           </Reveal>
         </div>

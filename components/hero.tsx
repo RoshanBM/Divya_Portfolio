@@ -132,7 +132,7 @@ export function Hero() {
 function PortraitSlot() {
   return (
     <div
-      data-cursor="hello"
+      data-cursor="button"
       className="group relative mx-auto aspect-[4/5] w-full max-w-[320px] overflow-hidden rounded-[20px]"
       style={{
         backgroundColor: "var(--card)",

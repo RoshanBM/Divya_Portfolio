@@ -204,15 +204,6 @@
   border-radius: 999px;
   pointer-events: none;
   z-index: 9999;
-  mix-blend-mode: normal;
-  display: grid;
-  place-items: center;
-  font-family: var(--font-sans);
-  font-size: 10px;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--bg);
   will-change: transform;
 }
 
