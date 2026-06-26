@@ -13,6 +13,8 @@ export type Project = {
     ratio: "portrait" | "square" | "wide" | "tall";
     type?: "image" | "video";
   }[];
+  // "split" => landscape media stacked on one side, portrait media on the other.
+  mediaLayout?: "split";
   accentNote?: string;
 };
 
@@ -112,8 +114,10 @@ export const projects: Project[] = [
       "Managed event coverage and visual storytelling from planning to final delivery.",
     ],
     tags: ["Shoot Production", "Videography", "Photography", "Event Management", "Brand Coverage"],
+    mediaLayout: "split",
     images: [
-      { src: "/work/hermitage 1.mp4", alt: "Hermitage event coverage reel", ratio: "portrait", type: "video" },
+      { src: "/work/hermitage 1.mp4", alt: "Hermitage event coverage reel", ratio: "wide", type: "video" },
+      { src: "/work/hermitage 3.jpeg", alt: "Hermitage dining experience still", ratio: "wide" },
       { src: "/work/hermitage 2.mp4", alt: "Hermitage brand documentation reel", ratio: "portrait", type: "video" },
     ],
   },

@@ -44,11 +44,11 @@ export function Nav() {
       className="fixed inset-x-0 top-0 z-50"
     >
       <div
-        className="mx-auto flex h-[68px] max-w-[1400px] items-center justify-between px-5 transition-[background-color,backdrop-filter,box-shadow] duration-500 md:px-8"
+        className="mx-auto flex h-[68px] max-w-[1400px] items-center justify-between px-5 transition-[background-color,box-shadow] duration-500 md:px-8"
         style={{
-          backgroundColor: scrolled ? "rgb(var(--shadow-tint) / 0.03)" : "transparent",
-          backdropFilter: scrolled ? "blur(14px) saturate(140%)" : "none",
-          WebkitBackdropFilter: scrolled ? "blur(14px) saturate(140%)" : "none",
+          backgroundColor: scrolled
+            ? "color-mix(in srgb, var(--bg) 88%, transparent)"
+            : "transparent",
           boxShadow: scrolled
             ? "0 1px 0 0 rgb(var(--shadow-tint) / 0.08), 0 10px 30px rgb(var(--shadow-tint) / 0.06)"
             : "none",

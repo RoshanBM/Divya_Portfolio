@@ -52,6 +52,11 @@ function CaseStudy({
   const hero = imageMedia[0];
   const rest = imageMedia.slice(1, 4);
 
+  // Split layout: landscape media stacked on the left, portrait media on the right.
+  const isSplit = project.mediaLayout === "split";
+  const landscapeMedia = project.images.filter((m) => m.ratio === "wide");
+  const portraitMedia = project.images.filter((m) => m.ratio !== "wide");
+
   return (
     <article className="grid grid-cols-1 gap-8 lg:grid-cols-12 lg:gap-10">
       {/* Text column */}
@@ -105,7 +110,40 @@ function CaseStudy({
       {/* Media column — images with vertical videos alongside */}
       <div className={`lg:col-span-8 ${flip ? "lg:order-1" : "lg:order-2"}`}>
         <div className="flex flex-col gap-4 md:gap-5 lg:flex-row">
-          {hasImages &&
+          {isSplit ? (
+            <>
+              {/* Landscape media stacked on the left */}
+              <div className="flex flex-1 flex-col gap-4 md:gap-5">
+                {landscapeMedia.map((m, i) =>
+                  m.type === "video" ? (
+                    <ScrollVideo key={m.src} src={m.src} alt={m.alt} aspect="aspect-[16/9]" />
+                  ) : (
+                    <ZoomImage
+                      key={m.src}
+                      src={m.src}
+                      alt={m.alt}
+                      priority={index === 0 && i === 0}
+                      aspect="aspect-[16/9]"
+                    />
+                  ),
+                )}
+              </div>
+              {/* Portrait media on the right */}
+              <div className="flex w-full flex-col gap-4 sm:flex-row md:gap-5 lg:w-[40%] lg:flex-col">
+                {portraitMedia.map((m) => (
+                  <div key={m.src} className="flex-1">
+                    {m.type === "video" ? (
+                      <ScrollVideo src={m.src} alt={m.alt} />
+                    ) : (
+                      <ZoomImage src={m.src} alt={m.alt} aspect="aspect-[4/5]" />
+                    )}
+                  </div>
+                ))}
+              </div>
+            </>
+          ) : (
+            <>
+              {hasImages &&
             (stacked ? (
               <div className="flex flex-col gap-4 md:gap-5 lg:w-[42%]">
                 {imageMedia.map((img, i) => (
@@ -173,13 +211,23 @@ function CaseStudy({
               ))}
             </div>
           )}
+            </>
+          )}
         </div>
       </div>
     </article>
   );
 }
 
-function ScrollVideo({ src, alt }: { src: string; alt: string }) {
+function ScrollVideo({
+  src,
+  alt,
+  aspect = "aspect-[9/16]",
+}: {
+  src: string;
+  alt: string;
+  aspect?: string;
+}) {
   const reduce = useReducedMotion();
   const ref = useRef<HTMLVideoElement>(null);
 
@@ -206,7 +254,7 @@ function ScrollVideo({ src, alt }: { src: string; alt: string }) {
       data-cursor="button"
       whileHover={reduce ? undefined : { y: -4 }}
       transition={{ type: "spring", stiffness: 220, damping: 22, bounce: 0 }}
-      className="group img-outline relative aspect-[9/16] w-full overflow-hidden rounded-[14px]"
+      className={`group img-outline relative ${aspect} w-full overflow-hidden rounded-[14px]`}
       style={{ boxShadow: "0 18px 44px rgb(var(--shadow-tint) / 0.14)" }}
     >
       <video
@@ -221,8 +269,8 @@ function ScrollVideo({ src, alt }: { src: string; alt: string }) {
       />
       {/* Subtle play-icon overlay */}
       <span
-        className="pointer-events-none absolute bottom-3 left-3 grid h-9 w-9 place-items-center rounded-full text-[var(--bg)] backdrop-blur-[2px] transition-opacity duration-300 group-hover:opacity-0"
-        style={{ backgroundColor: "rgb(var(--shadow-tint) / 0.45)" }}
+        className="pointer-events-none absolute bottom-3 left-3 grid h-9 w-9 place-items-center rounded-full text-[var(--bg)] transition-opacity duration-300 group-hover:opacity-0"
+        style={{ backgroundColor: "rgb(var(--shadow-tint) / 0.55)" }}
       >
         <Play size={15} weight="fill" />
       </span>
