@@ -7,13 +7,13 @@ import { Reveal, staggerParent, staggerChild } from "./motion-primitives";
 /* ---------- Marquee (single use on the page) ---------- */
 export function Marquee() {
   const words = [
-    "Brand Storytelling",
+    "Creative Direction",
+    "Brand Campaigns",
     "Content Strategy",
-    "Shoot Planning",
     "Influencer Marketing",
+    "Shoot Planning",
+    "Ad Campaigns",
     "Editing",
-    "Vox Pop",
-    "Campaigns",
   ];
   const row = [...words, ...words];
   return (
@@ -46,7 +46,7 @@ export function About() {
       <div className="grid grid-cols-1 gap-8 lg:grid-cols-12">
         <div className="lg:col-span-3">
           <Reveal>
-            <p className="text-[13px] font-semibold uppercase tracking-[0.18em] text-[var(--muted)]">
+            <p className="font-[family-name:var(--font-display)] text-[clamp(2.8rem,6vw,5rem)] font-bold leading-[0.95] tracking-tight text-[var(--ink)]">
               About
             </p>
           </Reveal>
@@ -60,10 +60,9 @@ export function About() {
           </Reveal>
           <Reveal delay={0.12}>
             <p className="mt-7 max-w-[60ch] text-[16px] leading-relaxed text-[var(--muted)] md:text-[17px]">
-              Currently a Content Marketing Strategist at Rocktfuel, working across
-              food, fashion, and lifestyle brands. My background spans strategy,
-              styling, shoot direction, and edit, so a single idea can travel from
-              concept to a finished, on-brand piece without losing its voice.
+              I aspire to work with diverse brands, building meaningful communication
+              strategies that help both the brand and its audience grow, while turning
+              creative ideas into measurable sales.
             </p>
           </Reveal>
         </div>
