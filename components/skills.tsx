@@ -19,8 +19,9 @@ export function Skills() {
         </Reveal>
 
         <div className="mt-12 flex flex-col gap-10">
-          <SkillRow label="Creative" items={skills.creative} />
+          <SkillRow label="Marketing" items={skills.marketing} />
           <SkillRow label="Tools" items={skills.tools} />
+          <SkillRow label="Personal Skills" items={skills.personal} />
           <SkillRow label="Languages" items={skills.languages} />
         </div>
       </div>
